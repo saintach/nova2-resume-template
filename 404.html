@@ -1,0 +1,57 @@
+<!--
+Theme Name: Nova2
+Author: Saint Aye Chan Htoon
+Author URI: http://www.saintayechanhtoon.me
+Description: The Nova2 for simple/minimal resume website is integrated with Bootstrap 3.0 that looks great on any device.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ah Oh!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="15; url=index.php">
+    <!--Bootstrap-->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!--My stylesheet-->
+    <link href="./css/style.css" rel="stylesheet" media="screen">
+    <!--Lightbox-->
+    <link href="./css/lightbox.css" rel="stylesheet" media="all">
+    <!--Favicon-->
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--Google Font-->
+    <link href="http://fonts.googleapis.com/css?family=Alef|Raleway|Quattrocento:700" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+        <section class="row">
+            <center><h1>404</h1>
+            <br>
+            <h2>Ah Oh! Sorry, it looks like you have found yourself lost in the maze within the secret chamber.</h2>
+            <br>
+            <h4><a href="index.php">Rescuse yourself from the dragon. </a></h4>
+            <h5>Or</h5>
+            <h5>I will rescuse you in ... <span id="timer"></span> secs.</h5></center>
+        </section>
+    </div>
+  </body>
+  <script src="./js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript">
+      var count=15;
+      var counter= setInterval(timer, 1000);
+      
+      function timer(){
+        count=count-1;
+        if (count <= 0)
+        {
+         clearInterval(counter);
+         return;
+        }
+        document.getElementById("timer").innerHTML=count;
+      }
+      
+  </script>
+</html>
